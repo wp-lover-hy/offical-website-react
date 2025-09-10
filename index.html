@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gutenberg Block Component Dev</title>
+    
+    <!-- 
+      THIS IS THE SIMULATION of WordPress theme.json CSS variables.
+      These variables are mocked from the user's theme.json to enable
+      standalone component development.
+    -->
+    <style>
+      :root {
+        /* Palette Colors */
+        --wp--preset--color--base: #ffffff;
+        --wp--preset--color--text: #1d1f23;
+        --wp--preset--color--text-muted: #5a6371;
+        --wp--preset--color--primary: #7b6cff;
+        --wp--preset--color--secondary: #5d6bff;
+        --wp--preset--color--accent: #9b7bff;
+        --wp--preset--color--bg-soft: #f7f8ff;
+        --wp--preset--color--border: #e6e8f0;
+
+        /* Font Families */
+        --wp--preset--font-family--system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+        --wp--preset--font-family--inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        
+        /* Font Sizes */
+        --wp--preset--font-size--small: 14px;
+        --wp--preset--font-size--medium: 16px;
+        --wp--preset--font-size--large: 20px;
+        --wp--preset--font-size--x-large: 24px;
+        --wp--preset--font-size--xx-large: 32px;
+
+        /* Spacing */
+        --wp--preset--spacing--xs: 8px;
+        --wp--preset--spacing--sm: 12px;
+        --wp--preset--spacing--md: 16px;
+        --wp--preset--spacing--lg: 24px;
+        --wp--preset--spacing--xl: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
