@@ -1,0 +1,65 @@
+@import '../../../../styles/variables.scss';
+
+.heroSection {
+  background: url('../../../../assets/images/hero-bg.jpg') center/cover no-repeat;
+  padding: 40px 0 527px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    padding: 20px 0 200px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.missionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.21;
+  color: #1E0F2A;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.description {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.21;
+  color: #4F4769;
+  margin: 0;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+}

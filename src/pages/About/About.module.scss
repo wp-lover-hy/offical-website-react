@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+
+.aboutPage {
+  background-color: #F9F8FC;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding-bottom: 120px;
+  
+  @media (max-width: 768px) {
+    gap: 66px;
+    padding-bottom: 40px;
+  }
+  
+  // 确保页面内容区域为1200px
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
+}
