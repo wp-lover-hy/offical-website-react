@@ -2,15 +2,8 @@
 
 .homePage {
   width: 100%;
-  min-height: 100vh;
   background: #F9F8FC;
   overflow-x: hidden;
-}
-
-.main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
   
   // 确保各个区块之间的间距
   & > * + * {

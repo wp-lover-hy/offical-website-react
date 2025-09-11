@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.scss';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
   };
 
   return (
@@ -32,11 +40,10 @@ export const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
-          <a href="#home" className={styles.navLink + ' ' + styles.active}>主页</a>
-          <a href="#website" className={styles.navLink}>独立站</a>
-          <a href="#services" className={styles.navLink}>系统服务</a>
-          <a href="#about" className={styles.navLink}>关于我们</a>
-          <a href="#contact" className={styles.navLink}>联系我们</a>
+          <Link to="/" className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}>主页</Link>
+          <Link to="/services" className={`${styles.navLink} ${isActive('/services') ? styles.active : ''}`}>服务</Link>
+          <Link to="/about" className={`${styles.navLink} ${isActive('/about') ? styles.active : ''}`}>关于我们</Link>
+          <Link to="/contact" className={`${styles.navLink} ${isActive('/contact') ? styles.active : ''}`}>联系我们</Link>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -52,11 +59,10 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         <nav className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
-          <a href="#home" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>主页</a>
-          <a href="#website" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>独立站</a>
-          <a href="#services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>系统服务</a>
-          <a href="#about" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>关于我们</a>
-          <a href="#contact" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>联系我们</a>
+          <Link to="/" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>主页</Link>
+          <Link to="/services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>服务</Link>
+          <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>关于我们</Link>
+          <Link to="/contact" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>联系我们</Link>
         </nav>
       </div>
     </header>

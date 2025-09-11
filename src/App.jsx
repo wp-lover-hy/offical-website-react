@@ -1,8 +1,8 @@
 import React from 'react';
-import { HomePage } from './components/HomePage/HomePage';
+import { AppRouter } from './router';
 
 function App() {
-  return <HomePage />;
+  return <AppRouter />;
 }
 
 export default App;

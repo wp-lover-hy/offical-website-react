@@ -1,0 +1,125 @@
+@use '../../styles/variables' as *;
+
+.contactPage {
+  padding: 80px 0;
+  background: #F9F8FC;
+  min-height: 60vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  p {
+    color: #666;
+    margin: 0;
+  }
+}
+
+.contactForm {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+  
+  input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    
+    &:focus {
+      outline: none;
+      border-color: #007cba;
+    }
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+}
+
+.submitBtn {
+  background: #007cba;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background: #005a87;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactPage {
+    padding: 40px 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .contactForm {
+    padding: 1.5rem;
+  }
+}
