@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
+import qrCodeImage from '../../../assets/images/qr-code.png';
 
 export const Footer = () => {
   const quickLinks = ['AI对话', 'AI绘画', '价格', '开放平台'];
@@ -65,7 +66,7 @@ export const Footer = () => {
             </div>
             <div className={styles.qrCode}>
               <div className={styles.qrCodeContainer}>
-                <div className={styles.qrCodeImage}></div>
+                <img src={qrCodeImage} alt="微信二维码" className={styles.qrCodeImage} />
               </div>
             </div>
           </div>
@@ -81,8 +82,10 @@ export const Footer = () => {
         </div>
 
         <div className={styles.copyright}>
-          <span className={styles.copyrightText}>2024 好雨Al. All rights reserved</span>
-          <span className={styles.icpText}>京ICP备xxxxxxxx号-x</span>
+          <div className={styles.copyrightContent}>
+            <span className={styles.copyrightText}>2024 好雨Al. All rights reserved</span>
+            <span className={styles.icpText}>京ICP备xxxxxxxx号-x</span>
+          </div>
         </div>
       </div>
     </footer>
