@@ -1,0 +1,183 @@
+.advantagesSection {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  color: #1E0F2A;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  color: #4F4769;
+  margin: 0;
+  max-width: 1200px;
+}
+
+.advantagesGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 27px;
+  width: 100%;
+}
+
+.advantageCard {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(143, 143, 255, 1) 100%);
+  border: 4px solid;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%) 1;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  text-align: center;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconBackground {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(108, 99, 255, 1) 0%, rgba(14, 0, 255, 1) 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardTitle {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #1E0F2A;
+  margin: 0;
+  width: 320px;
+  height: 28px;
+  text-align: center;
+}
+
+.cardDescription {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4F4769;
+  margin: 0;
+  width: 320px;
+  text-align: center;
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .advantagesGrid {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .advantageCard {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .cardTitle,
+  .cardDescription {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .advantagesSection {
+    padding: 40px 0;
+    gap: 24px;
+  }
+
+  .container {
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .advantageCard {
+    max-width: 343px;
+    padding: 32px;
+  }
+
+  .iconBackground {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+    height: 28px;
+    width: 273px;
+  }
+
+  .cardDescription {
+    font-size: 12px;
+    width: 273px;
+  }
+}

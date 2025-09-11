@@ -1,0 +1,17 @@
+.homePage {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .heroContainer {
+    margin-bottom: 60px;
+  }
+}

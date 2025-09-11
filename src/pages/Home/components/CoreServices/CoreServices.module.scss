@@ -1,0 +1,176 @@
+.coreServices {
+  background: url('/images/services-bg.jpg') center/cover no-repeat;
+  padding: 80px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.21;
+  color: #0F172A;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+}
+
+.servicesGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 110px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.serviceCard {
+  background: linear-gradient(157deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 1) 88%);
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  padding: 40px 40px 80px 40px;
+  position: relative;
+  flex: 1;
+  max-width: 545px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.serviceHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 144px;
+}
+
+.serviceName {
+  font-family: Inter, sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.33;
+  color: #1E0F2A;
+  margin: 0;
+}
+
+.serviceTagline {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.21;
+  color: #4F46E5;
+  margin: 0;
+}
+
+.serviceDescription {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4F4769;
+  margin: 0;
+  max-width: 400px;
+}
+
+.serviceLink {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.21;
+  color: #4F46E5;
+  text-decoration: none;
+  margin: 0;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.serviceIcon {
+  position: absolute;
+  top: 98px;
+  right: 40px;
+  width: 240px;
+  height: 240px;
+  opacity: 0.4;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+// 响应式设计
+@media (max-width: 1024px) {
+  .servicesGrid {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .serviceCard {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .serviceIcon {
+    width: 180px;
+    height: 180px;
+    top: 80px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .coreServices {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 16px;
+    gap: 32px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .serviceCard {
+    padding: 20px 20px 40px 20px;
+    gap: 24px;
+  }
+
+  .serviceName {
+    font-size: 18px;
+  }
+
+  .serviceTagline {
+    font-size: 14px;
+  }
+
+  .serviceDescription {
+    font-size: 12px;
+    line-height: 2;
+    max-width: 303px;
+  }
+
+  .serviceLink {
+    font-size: 14px;
+  }
+
+  .serviceIcon {
+    width: 160px;
+    height: 160px;
+    top: 110px;
+    right: 20px;
+  }
+}
