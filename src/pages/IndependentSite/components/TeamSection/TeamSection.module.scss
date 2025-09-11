@@ -1,0 +1,157 @@
+.teamSection {
+  background-image: url('/images/team-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 0 250px;
+  
+  @media (max-width: 768px) {
+    background-image: url('/images/team-bg-mobile.jpg');
+    padding: 40px 0 20px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 250px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 218px;
+  }
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.21;
+  color: #1E0F2A;
+  margin: 0 0 32px 0;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin: 0 0 12px 0;
+    line-height: 1.21;
+  }
+}
+
+.description {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #4F4769;
+  margin: 0;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.companiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  
+  @media (max-width: 768px) {
+    gap: 4px;
+  }
+}
+
+.companiesTitle {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.56;
+  color: #4F4769;
+  text-align: center;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 2.33;
+    color: #C0C0C0;
+  }
+}
+
+.companiesGrid {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 36px;
+  
+  @media (max-width: 768px) {
+    gap: 12px;
+    height: 26px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.companyLogo {
+  height: 36px;
+  display: flex;
+  align-items: center;
+  
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  &:nth-child(1) {
+    width: 77px;
+  }
+  
+  &:nth-child(2) {
+    width: 77px;
+  }
+  
+  &:nth-child(3) {
+    width: 77px;
+  }
+  
+  &:nth-child(4) {
+    width: 77px;
+  }
+  
+  &:nth-child(5) {
+    width: 77px;
+  }
+  
+  @media (max-width: 768px) {
+    height: 26px;
+    
+    &:nth-child(1) {
+      width: 54px;
+    }
+    
+    &:nth-child(2) {
+      width: 55px;
+    }
+    
+    &:nth-child(3) {
+      width: 54px;
+    }
+    
+    &:nth-child(4) {
+      width: 55px;
+    }
+    
+    &:nth-child(5) {
+      width: 54px;
+    }
+  }
+}

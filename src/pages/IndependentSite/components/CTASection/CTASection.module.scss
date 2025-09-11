@@ -1,0 +1,137 @@
+.ctaSection {
+  background-image: url('/images/cta-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+  
+  @media (max-width: 768px) {
+    background-image: url('/images/cta-bg-mobile.jpg');
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    gap: 48px;
+  }
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  color: #FFFFFF;
+  margin: 0;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+}
+
+.description {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.21;
+  color: #E0E7FF;
+  margin: 0;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.ctaActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    width: 343px;
+  }
+}
+
+.ctaButton {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 20px;
+  font-family: 'Noto Sans SC', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: linear-gradient(-5deg, #4F46E5 0%, #4E7AFF 95%);
+  color: #4F46E5;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 298px;
+  height: 56px;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 10px;
+    width: auto;
+  }
+}
+
+.limitNotice {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  
+  span {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    color: #FFD000;
+    
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 2.33;
+    }
+  }
+}
+
+.sparkIcon {
+  width: 24px;
+  height: 24px;
+  
+  @media (max-width: 768px) {
+    width: 16px;
+    height: 16px;
+    
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { About } from '../pages/About/About';
 import { Services } from '../pages/Services/Services';
 import { Blog } from '../pages/Blog/Blog';
 import { BlogDetail } from '../pages/BlogDetail/BlogDetail';
+import { IndependentSite } from '../pages/IndependentSite/IndependentSite';
 
 
 const router = createBrowserRouter([
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'blog/:slug',
         element: <BlogDetail />,
+      },
+      {
+        path: 'independent-site',
+        element: <IndependentSite />,
       }
     ],
   },
