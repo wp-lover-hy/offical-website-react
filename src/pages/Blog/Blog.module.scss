@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.blog {
+  background-color: #F9F8FC;
+  min-height: 100vh;
+}
+
+.content {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  top: -120px;
+  
+  @media (max-width: 1240px) {
+    width: calc(100% - 40px);
+  }
+  
+  @media (max-width: 768px) {
+    width: calc(100% - 32px);
+    padding: 0 16px;
+    top: 0;
+  }
+}

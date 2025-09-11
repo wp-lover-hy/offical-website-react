@@ -1,0 +1,25 @@
+@import '../../styles/variables.scss';
+
+.blogDetail {
+  background-color: #F9F8FC;
+  min-height: 100vh;
+  padding: 80px 0 120px;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+    gap: 20px;
+  }
+}

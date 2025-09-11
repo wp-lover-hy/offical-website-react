@@ -1,0 +1,22 @@
+@import '../../../../styles/variables.scss';
+
+.articleList {
+  width: 100%;
+  margin-bottom: 80px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 58px;
+  justify-content: space-between;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}

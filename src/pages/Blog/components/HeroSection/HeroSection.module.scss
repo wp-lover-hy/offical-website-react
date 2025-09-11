@@ -1,0 +1,153 @@
+@import '../../../../styles/variables.scss';
+
+.hero {
+  background-image: url('../../../../assets/images/blog-hero-bg-pc.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    background-image: url('../../../../assets/images/blog-hero-bg-mobile.png');
+    height: auto;
+    padding: 85px 0;
+    gap: 12px;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+    gap: 16px;
+  }
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.21;
+  text-align: center;
+  color: #1E0F2A;
+  margin: 0;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.21;
+  }
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  text-align: center;
+  color: #4F4769;
+  margin: 0;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+}
+
+.searchContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+  }
+}
+
+.searchBox {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 59px;
+  width: 720px;
+  max-width: 100%;
+  
+  @media (max-width: 768px) {
+    border-radius: 40px;
+    padding: 4px 4px 4px 12px;
+    gap: 0;
+    width: 343px;
+  }
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.21;
+  letter-spacing: 2%;
+  color: #4F4769;
+  opacity: 0.5;
+  background: transparent;
+  
+  &::placeholder {
+    color: #4F4769;
+    opacity: 0.5;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+}
+
+.searchButton {
+  width: 48px;
+  height: 48px;
+  background: #4F46E5;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  &:hover {
+    background: #3730A3;
+  }
+  
+  i {
+    color: #FFFFFF;
+    font-size: 21px;
+  }
+  
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    
+    i {
+      font-size: 21px;
+    }
+  }
+}
