@@ -41,7 +41,7 @@ export const Header = () => {
         {/* Desktop Navigation */}
         <nav className={styles.desktopNav}>
           <Link to="/" className={`${styles.navLink} ${isActive('/') ? styles.active : ''}`}>主页</Link>
-          <Link to="/services" className={`${styles.navLink} ${isActive('/services') ? styles.active : ''}`}>独立站</Link>
+          <Link to="/independent-site" className={`${styles.navLink} ${isActive('/independent-site') ? styles.active : ''}`}>独立站</Link>
           <Link to="/services" className={`${styles.navLink} ${isActive('/services') ? styles.active : ''}`}>系统服务</Link>
           <Link to="/about" className={`${styles.navLink} ${isActive('/about') ? styles.active : ''}`}>关于我们</Link>
           <Link to="/contact" className={`${styles.navLink} ${isActive('/contact') ? styles.active : ''}`}>联系我们</Link>
@@ -61,7 +61,7 @@ export const Header = () => {
         {/* Mobile Navigation */}
         <nav className={`${styles.mobileNav} ${isMenuOpen ? styles.open : ''}`}>
           <Link to="/" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>主页</Link>
-          <Link to="/services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>独立站</Link>
+          <Link to="/independent-site" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>独立站</Link>
           <Link to="/services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>系统服务</Link>
           <Link to="/about" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>关于我们</Link>
           <Link to="/contact" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>联系我们</Link>
