@@ -1,0 +1,228 @@
+@import '../../../../styles/variables.scss';
+
+.certaintyFeatures {
+  padding: 80px 0;
+  background-color: #F9F8FC;
+  
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+  
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    gap: 12px;
+    max-width: 343px;
+  }
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.21;
+  color: #0F172A;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 1.21;
+  }
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  color: #4F4769;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 1.21;
+  }
+}
+
+.featuresGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 51px;
+  width: 100%;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 96px;
+    width: 343px;
+  }
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 20px;
+  width: 220px;
+  background: linear-gradient(179deg, rgba(255, 255, 255, 0) 0%, rgba(241, 232, 255, 1) 100%);
+  border: 4px solid;
+  border-image: linear-gradient(180deg, rgba(190, 193, 255, 1) 0%, rgba(157, 151, 255, 1) 100%) 1;
+  border-radius: 20px;
+  
+  @media (max-width: 768px) {
+    width: 160px;
+    padding: 20px 12px;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBg {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(-5deg, rgba(79, 70, 229, 1) 0%, rgba(78, 122, 255, 1) 95%);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
+  
+  &[data-icon="design"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/icon-document.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[data-icon="eye"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/icon-activity.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[data-icon="time"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/icon-graph.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[data-icon="vip"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/icon-chart.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &[data-icon="thumb"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../assets/images/icon-profile.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.featureTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #1E0F2A;
+  margin: 0;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}

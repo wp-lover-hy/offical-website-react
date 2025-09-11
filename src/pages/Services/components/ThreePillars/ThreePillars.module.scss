@@ -1,0 +1,202 @@
+@import '../../../../styles/variables.scss';
+
+.threePillars {
+  padding: 80px 0;
+  background-image: url('../../../../assets/images/pillars-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  @media (max-width: 768px) {
+    padding: 40px 16px;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.21;
+  color: #0F172A;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 1.21;
+  }
+}
+
+.pillarsGrid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 27px;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.pillarCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(143, 143, 255, 1) 100%);
+  border: 4px solid;
+  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%) 1;
+  border-radius: 20px;
+  flex: 1;
+  height: 276px;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    padding: 32px;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconBg {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(180deg, rgba(205, 202, 255, 1) 0%, rgba(59, 47, 255, 1) 100%);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @media (max-width: 768px) {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    width: 28px;
+    height: 28px;
+  }
+  
+  &[data-icon="team"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 24px;
+    background-color: #4F46E5;
+    mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 21V19A4 4 0 0 0 13 15H5A4 4 0 0 0 1 19V21M23 21V19A4 4 0 0 0 16 15.13M16 3.13A4 4 0 0 1 16 10.87M9 11A4 4 0 1 0 0 7A4 4 0 0 0 9 11Z' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+    mask-size: contain;
+  }
+  
+  &[data-icon="process"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: #4F46E5;
+    mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 12H18L15 21L9 3L6 12H2' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+    mask-size: contain;
+  }
+  
+  &[data-icon="responsibility"]::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: #4F46E5;
+    mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='8' r='7' stroke='currentColor' stroke-width='2'/%3E%3Cpolyline points='8.21,13.89 7,23 12,20 17,23 15.79,13.88' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+    mask-size: contain;
+  }
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.pillarTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #1E0F2A;
+  margin: 0;
+  width: 320px;
+  height: 28px;
+  
+  @media (max-width: 768px) {
+    width: 273px;
+    height: 28px;
+    font-size: 18px;
+    line-height: 1.56;
+  }
+}
+
+.pillarDescription {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+  width: 320px;
+  
+  @media (max-width: 768px) {
+    width: 273px;
+    font-size: 12px;
+    line-height: 1.21;
+  }
+}

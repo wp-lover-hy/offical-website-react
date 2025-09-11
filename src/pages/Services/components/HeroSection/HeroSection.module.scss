@@ -1,0 +1,74 @@
+@import '../../../../styles/variables.scss';
+
+.heroSection {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  background-image: url('../../../../assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 85px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 720px;
+  
+  @media (max-width: 768px) {
+    padding: 85px 0;
+    min-height: auto;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  
+  @media (max-width: 768px) {
+    max-width: 343px;
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+  line-height: 1.21;
+  color: #1E0F2A;
+  margin: 0;
+  
+  @media (max-width: 768px) {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 1.21;
+  }
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  color: #4F4769;
+  margin: 0;
+  max-width: 1200px;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 1.21;
+    max-width: 343px;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.services {
+  width: 100%;
+  background-color: #F9F8FC;
+  
+  // 确保页面内容区域为1200px
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    
+    @media (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
+}
