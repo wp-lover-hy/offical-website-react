@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *;
+
+.homePage {
+  width: 100%;
+  min-height: 100vh;
+  background: #F9F8FC;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  // 确保各个区块之间的间距
+  & > * + * {
+    margin-top: 0;
+  }
+}
+
+// 全局响应式断点
+@media (max-width: 1200px) {
+  .homePage {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    font-size: 12px;
+  }
+}
+
+// 确保在移动端滚动流畅
+@media (max-width: 768px) {
+  .homePage {
+    -webkit-overflow-scrolling: touch;
+  }
+}

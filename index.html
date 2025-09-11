@@ -12,35 +12,81 @@
       standalone component development.
     -->
     <style>
-      :root {
-        /* Palette Colors */
-        --wp--preset--color--base: #ffffff;
-        --wp--preset--color--text: #1d1f23;
-        --wp--preset--color--text-muted: #5a6371;
-        --wp--preset--color--primary: #7b6cff;
-        --wp--preset--color--secondary: #5d6bff;
-        --wp--preset--color--accent: #9b7bff;
-        --wp--preset--color--bg-soft: #f7f8ff;
-        --wp--preset--color--border: #e6e8f0;
+      /* style.css */
+        :root {
+        /* ----------------------------------------------------------------- */
+        /* 1. Palette Colors (颜色)
+        /* - 遵循 WordPress theme.json 规范，方便在编辑器中调用
+        /* ----------------------------------------------------------------- */
+        --wp--preset--color--base: #ffffff; /* 基础白，用于卡片、页面背景 */
+        --wp--preset--color--contrast: #1d1f23; /* 对比色/主文本色，用于标题和正文 */
+        --wp--preset--color--contrast-secondary: #5a6371; /* 次级文本色，用于描述、辅助信息 */
+        --wp--preset--color--primary: #7b6cff; /* 主题色 */
+        --wp--preset--color--secondary: #5d6bff; /* 輔助主題色，常用于渐变 */
+        --wp--preset--color--accent: #9b7bff; /* 点缀色，更亮的紫色 */
+        --wp--preset--color--background: #f7f8ff; /* 浅背景色，用于区分不同区块 */
+        --wp--preset--color--border: #e6e8f0; /* 边框颜色 */
+        
+        /* ----------------------------------------------------------------- */
+        /* 2. Gradients (渐变)
+        /* ----------------------------------------------------------------- */
+        --wp--preset--gradient--primary-gradient: linear-gradient(90deg, var(--wp--preset--color--secondary), var(--wp--preset--color--primary));
 
+        /* ----------------------------------------------------------------- */
+        /* 3. Typography (排版)
+        /* ----------------------------------------------------------------- */
         /* Font Families */
         --wp--preset--font-family--system-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-        --wp--preset--font-family--inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        
-        /* Font Sizes */
-        --wp--preset--font-size--small: 14px;
-        --wp--preset--font-size--medium: 16px;
-        --wp--preset--font-size--large: 20px;
-        --wp--preset--font-size--x-large: 24px;
-        --wp--preset--font-size--xx-large: 32px;
+        --wp--preset--font-family--inter: 'Inter', sans-serif; /* 设计稿字体推荐使用 Inter */
 
-        /* Spacing */
-        --wp--preset--spacing--xs: 8px;
-        --wp--preset--spacing--sm: 12px;
-        --wp--preset--spacing--md: 16px;
-        --wp--preset--spacing--lg: 24px;
-        --wp--preset--spacing--xl: 40px;
-      }
+        /* Font Sizes - 使用 clamp() 实现移动端友好、流畅缩放的字体 */
+        --wp--preset--font-size--small: clamp(0.875rem, 0.82rem + 0.27vw, 1rem); /* 14px -> 16px */
+        --wp--preset--font-size--medium: clamp(1rem, 0.91rem + 0.45vw, 1.25rem); /* 16px -> 20px (正文) */
+        --wp--preset--font-size--large: clamp(1.25rem, 1.14rem + 0.57vw, 1.56rem); /* 20px -> 25px */
+        --wp--preset--font-size--x-large: clamp(1.5rem, 1.3rem + 1vw, 2rem); /* 24px -> 32px (卡片标题) */
+        --wp--preset--font-size--xx-large: clamp(2rem, 1.64rem + 1.82vw, 2.9rem); /* 32px -> 46px (区块标题) */
+        --wp--preset--font-size--huge: clamp(2.5rem, 1.86rem + 3.18vw, 4rem); /* 40px -> 64px (Hero 标题) */
+
+        /* Font Weights */
+        --wp--custom--font-weight--regular: 400;
+        --wp--custom--font-weight--medium: 500;
+        --wp--custom--font-weight--bold: 700;
+
+        /* Line Heights */
+        --wp--custom--line-height--heading: 1.3;
+        --wp--custom--line-height--body: 1.7;
+
+        /* ----------------------------------------------------------------- */
+        /* 4. Spacing (间距)
+        /* - 同样使用 clamp() 来创建响应式间距，在小屏幕上间距小，大屏幕上间距大
+        /* ----------------------------------------------------------------- */
+        --wp--preset--spacing--xxs: clamp(0.25rem, 0.16rem + 0.45vw, 0.5rem);      /* 4px -> 8px */
+        --wp--preset--spacing--xs: clamp(0.5rem, 0.32rem + 0.91vw, 1rem);       /* 8px -> 16px */
+        --wp--preset--spacing--sm: clamp(0.75rem, 0.48rem + 1.36vw, 1.5rem);      /* 12px -> 24px */
+        --wp--preset--spacing--md: clamp(1rem, 0.64rem + 1.82vw, 2rem);         /* 16px -> 32px */
+        --wp--preset--spacing--lg: clamp(1.5rem, 0.95rem + 2.73vw, 3rem);        /* 24px -> 48px */
+        --wp--preset--spacing--xl: clamp(2rem, 1.27rem + 3.64vw, 4rem);        /* 32px -> 64px */
+        --wp--preset--spacing--xxl: clamp(3rem, 1.91rem + 5.45vw, 6rem);       /* 48px -> 96px (区块上下间距) */
+        --wp--preset--spacing--xxxl: clamp(4rem, 2.55rem + 7.27vw, 8rem);      /* 64px -> 128px (超大间距) */
+
+        /* ----------------------------------------------------------------- */
+        /* 5. Layout (布局)
+        /* ----------------------------------------------------------------- */
+        --wp--style--global--content-size: 680px; /* 内容默认宽度，如文章 */
+        --wp--style--global--wide-size: 1200px; /* 通栏宽度 */
+        
+        /* ----------------------------------------------------------------- */
+        /* 6. Borders & Shadows (边框与阴影)
+        /* ----------------------------------------------------------------- */
+        --wp--custom--border-radius--sm: 4px;
+        --wp--custom--border-radius--md: 8px; /* 用于卡片 */
+        --wp--custom--border-radius--lg: 16px;
+        --wp--custom--border-radius--pill: 9999px; /* 用于药丸状按钮 */
+
+        --wp--custom--box-shadow--sm: 0 2px 4px rgba(29, 31, 35, 0.04);
+        --wp--custom--box-shadow--md: 0 4px 12px rgba(29, 31, 35, 0.08); /* 用于卡片 */
+        --wp--custom--box-shadow--lg: 0 10px 30px rgba(93, 107, 255, 0.1);
+        }
     </style>
   </head>
   <body>

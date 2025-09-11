@@ -1,0 +1,174 @@
+@use '../../styles/variables' as *;
+
+.teamIntro {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(79, 70, 229, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  padding: 160px 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 460px;
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+    gap: 200px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0 243px;
+
+  @media (max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 1435px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.21;
+  text-align: center;
+  color: #1E0F2A;
+  margin: 0;
+  width: 100%;
+  max-width: 1435px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    max-width: 343px;
+  }
+}
+
+.description {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.21;
+  text-align: center;
+  color: #4F4769;
+  margin: 0;
+  width: 100%;
+  max-width: 1435px;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    max-width: 343px;
+  }
+}
+
+.companiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+}
+
+.companiesTitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  text-align: center;
+  color: #C0C0C0;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    line-height: 2.33;
+  }
+}
+
+.companiesGrid {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 36px;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    height: 26px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.companyLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoPlaceholder {
+  width: 77px;
+  height: 36px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #374151 0%, #1F2937 100%);
+
+  @media (max-width: 768px) {
+    width: 54px;
+    height: 26px;
+    font-size: 8px;
+  }
+
+  &.alibaba {
+    background: linear-gradient(135deg, #FF6A00 0%, #FF8F00 100%);
+  }
+
+  &.tencent {
+    background: linear-gradient(135deg, #00A0E9 0%, #0078D4 100%);
+  }
+
+  &.bytedance {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+  }
+
+  &.jd {
+    background: linear-gradient(135deg, #E3002B 0%, #C8102E 100%);
+  }
+
+  &.meituan {
+    background: linear-gradient(135deg, #FFD100 0%, #FFC107 100%);
+    color: #000000;
+  }
+}

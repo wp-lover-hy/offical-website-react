@@ -1,0 +1,134 @@
+/* Import any other global partials here */
+@use 'variables';
+
+body {
+  font-family: var(--wp--preset--font-family--system-font);
+  background-color: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--text);
+  font-size: var(--wp--preset--font-size--medium);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--wp--preset--font-family--inter);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--wp--preset--color--primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--wp--preset--color--secondary);
+  }
+}
+
+/* utility-classes.css */
+
+/* ---------------------------------- */
+/* Layout & Container                 */
+/* ---------------------------------- */
+.container {
+    width: 100%;
+    max-width: var(--wp--style--global--wide-size);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--wp--preset--spacing--md);
+    padding-right: var(--wp--preset--spacing--md);
+  }
+  
+  /* ---------------------------------- */
+  /* Section Spacing                    */
+  /* ---------------------------------- */
+  .section-padding {
+    padding-top: var(--wp--preset--spacing--xxl);
+    padding-bottom: var(--wp--preset--spacing--xxl);
+  }
+  
+  /* ---------------------------------- */
+  /* Typography                         */
+  /* ---------------------------------- */
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--wp--preset--font-family--inter);
+    font-weight: var(--wp--custom--font-weight--bold);
+    line-height: var(--wp--custom--line-height--heading);
+    color: var(--wp--preset--color--contrast);
+  }
+  .h1 { font-size: var(--wp--preset--font-size--huge); }
+  .h2 { font-size: var(--wp--preset--font-size--xx-large); }
+  .h3 { font-size: var(--wp--preset--font-size--x-large); }
+  .h4 { font-size: var(--wp--preset--font-size--large); }
+  
+  .text-primary { color: var(--wp--preset--color--primary) !important; }
+  .text-secondary { color: var(--wp--preset--color--contrast-secondary) !important; }
+  .text-center { text-align: center; }
+  
+  /* ---------------------------------- */
+  /* Button                             */
+  /* ---------------------------------- */
+  .btn {
+    display: inline-block;
+    font-family: var(--wp--preset--font-family--inter);
+    font-weight: var(--wp--custom--font-weight--medium);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: var(--wp--preset--spacing--sm) var(--wp--preset--spacing--lg);
+    font-size: var(--wp--preset--font-size--medium);
+    border-radius: var(--wp--custom--border-radius--pill);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary {
+    color: var(--wp--preset--color--base);
+    background: var(--wp--preset--gradient--primary-gradient);
+    box-shadow: var(--wp--custom--box-shadow--lg);
+  }
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(93, 107, 255, 0.2);
+  }
+  
+  .btn-secondary {
+    color: var(--wp--preset--color--contrast);
+    background-color: var(--wp--preset--color--base);
+    border-color: var(--wp--preset--color--border);
+  }
+  .btn-secondary:hover {
+    border-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--primary);
+  }
+  
+  /* ---------------------------------- */
+  /* Card                               */
+  /* ---------------------------------- */
+  .card {
+    background-color: var(--wp--preset--color--base);
+    border: 1px solid var(--wp--preset--color--border);
+    border-radius: var(--wp--custom--border-radius--md);
+    box-shadow: var(--wp--custom--box-shadow--md);
+    padding: var(--wp--preset--spacing--lg);
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--wp--custom--box-shadow--lg);
+  }
+  
+  /* ---------------------------------- */
+  /* Spacing Utilities (Optional)       */
+  /* - 如果你的项目需要，可以添加间距工具类
+  /* - 遵循 Bootstrap/Tailwind 的命名方式，例如 .mt-md (margin-top-medium)
+  /* ---------------------------------- */
+  .mt-sm { margin-top: var(--wp--preset--spacing--sm); }
+  .mb-lg { margin-bottom: var(--wp--preset--spacing--lg); }
+  /* ... 可以按需添加更多 ... */

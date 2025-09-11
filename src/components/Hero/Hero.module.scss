@@ -1,0 +1,293 @@
+@use '../../styles/variables' as *;
+
+.hero {
+  position: relative;
+  min-height: 697px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding: 60px 0;
+  }
+}
+
+// 渐变背景
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.backgroundGradient1 {
+  position: absolute;
+  top: 62px;
+  left: 148px;
+  z-index: 2;
+  width: 1060px;
+  height: 958.192px;
+  border-radius: 1060px;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(104, 158, 255, 0.60) 0%, rgba(225, 251, 255, 0.60) 100%);
+  filter: blur(200px);
+
+  @media (max-width: 1200px) {
+    width: 800px;
+    height: 700px;
+    left: 50px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 400px;
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.backgroundGradient2 {
+  position: absolute;
+  top: 109px;
+  right: -56px;
+  z-index: 2;
+  width: 944px;
+  height: 781.017px;
+  border-radius: 944px;
+  opacity: 0.5;
+  background: linear-gradient(6deg, rgba(9, 0, 255, 0.40) 9.18%, rgba(255, 255, 255, 0.40) 117.09%);
+  filter: blur(150px);
+
+  @media (max-width: 1200px) {
+    width: 700px;
+    height: 600px;
+    right: -100px;
+  }
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 300px;
+    right: -50px;
+    top: 50px;
+  }
+}
+
+// 主容器
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (max-width: 1200px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 16px;
+  }
+}
+
+// 内容区域
+.content {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  min-height: 697px;
+
+  @media (max-width: 1200px) {
+    gap: 60px;
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+}
+
+// 文字区域
+.text {
+  flex: 1;
+  max-width: 600px;
+  color: #ffffff;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+}
+
+// 标题
+.title {
+  margin: 0 0 24px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1E0F2A;
+
+  @media (max-width: 1200px) {
+    font-size: 42px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 36px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+  }
+}
+
+.titleLine {
+  display: block;
+}
+
+// 描述文字
+.description {
+  margin: 0 0 40px 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #4F4769;
+  max-width: 500px;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+// 按钮组
+.buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// 按钮基础样式
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  text-align: center;
+  border-radius: 40px;
+
+  @media (max-width: 768px) {
+    min-width: 160px;
+    padding: 14px 24px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+// 主按钮 - 渐变背景
+.buttonPrimary {
+  background: linear-gradient(357deg, #4F46E5 1.81%, #4E7AFF 92.46%);
+  color: #ffffff;
+  border: none;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  }
+}
+
+// 次按钮 - 白色边框
+.buttonSecondary {
+  background: transparent;
+  color: #8b5cf6;
+  border-color: #8b5cf6;
+
+  &:hover {
+    background: #8b5cf6;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+  }
+}
+
+// 图片区域
+.image {
+  flex: 1;
+  max-width: 680px;
+  height: 537px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 992px) {
+    max-width: 100%;
+    height: 400px;
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+}
+
+// 图片元素
+.imageElement {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+// 占位符
+.placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.placeholderContent {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.placeholderIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
