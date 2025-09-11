@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.scss';
+import logo from '../../../assets/images/logo-haoyuai.png';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,19 +23,7 @@ export const Header = () => {
         {/* Logo */}
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <svg width="109" height="49" viewBox="0 0 109 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0H35.95C35.95 0 35.95 48.7 35.95 48.7H0V0Z" fill="url(#gradient1)"/>
-              <path d="M41.74 13.92C41.74 13.92 63.77 13.92 63.77 35.95C63.77 35.95 41.74 35.95 41.74 13.92Z" fill="#4F46E5"/>
-              <path d="M66.1 15.07C66.1 15.07 88.13 15.07 88.13 35.94C88.13 35.94 66.1 35.94 66.1 15.07Z" fill="#4F46E5"/>
-              <path d="M89.29 16.23C89.29 16.23 104.36 16.23 104.36 33.62C104.36 33.62 89.29 33.62 89.29 16.23Z" fill="#4F46E5"/>
-              <path d="M106.68 16.23H109V33.62H106.68V16.23Z" fill="#4F46E5"/>
-              <defs>
-                <linearGradient id="gradient1" x1="0" y1="0" x2="35.95" y2="48.7" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#4F46E5"/>
-                  <stop offset="0.95" stopColor="#6B90FF"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src={logo} alt="logo" className={styles.logoImage} />
           </div>
         </div>
 
