@@ -101,9 +101,10 @@
 }
 
 .serviceCard {
-  background: linear-gradient(157deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 1) 88%);
-  border: 2px solid rgba(255, 255, 255, 1);
   border-radius: 20px;
+  border: 2px solid #FFF;
+  background: linear-gradient(116deg, rgba(255, 255, 255, 0.20) 16.94%, rgba(255, 255, 255, 0.20) 67.8%);
+
   padding: 40px 40px 80px 40px;
   position: relative;
   flex: 1;
@@ -167,6 +168,7 @@
   right: 0;
   width: 240px;
   height: 240px;
+  z-index: 0;
   
   img {
     width: 100%;
@@ -186,13 +188,12 @@
   .serviceCard {
     max-width: 600px;
     width: 100%;
+    background: linear-gradient(116deg, rgba(255, 255, 255, 0.20) 16.94%, rgba(255, 255, 255, 0.20) 67.8%);
   }
 
   .serviceIcon {
     width: 180px;
     height: 180px;
-    top: 80px;
-    right: 20px;
   }
 }
 
@@ -236,7 +237,5 @@
   .serviceIcon {
     width: 160px;
     height: 160px;
-    top: 110px;
-    right: 20px;
   }
 }
