@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Chen
+ * @Date: 2025-09-13 09:01:43
+ * @LastEditors: Chen
+ * @LastEditTime: 2025-09-13 10:28:22
+ */
 import React from 'react';
 import styles from './ComparisonSection.module.scss';
 
@@ -34,22 +42,23 @@ export const ComparisonSection = () => {
     <section className={styles.comparisonSection}>
       <div className={styles.container}>
         <h2 className={styles.title}>B2B平台 VS 品牌独立站</h2>
-        
+
         <div className={styles.comparisonTable}>
           {/* 类别列 */}
           <div className={styles.categoryColumn}>
-            <div className={styles.tableHeader}></div>
+            {/* <div className={styles.leftHeader}></div> */}
             {comparisonData.map((item, index) => (
               <div key={index} className={styles.categoryCell}>
                 {item.category}
               </div>
             ))}
           </div>
-          
+
           {/* B2B平台列 */}
           <div className={styles.b2bColumn}>
             <div className={styles.tableHeader}>
-              B2B平台 (公域流量)
+              <div className={styles.tableCont}> B2B平台 (公域流量) </div>
+
             </div>
             {comparisonData.map((item, index) => (
               <div key={index} className={styles.b2bCell}>
@@ -57,13 +66,13 @@ export const ComparisonSection = () => {
               </div>
             ))}
           </div>
-          
+
           {/* 独立站列 */}
           <div className={styles.independentColumn}>
             <div className={`${styles.tableHeader} ${styles.independentHeader}`}>
               <div className={styles.starIcon}>
                 <svg width="29" height="29" viewBox="0 0 29 29" fill="none">
-                  <path d="M14.5 2L17.5 10.5H26.5L19.5 15.5L22.5 24L14.5 19L6.5 24L9.5 15.5L2.5 10.5H11.5L14.5 2Z" fill="#FFFFFF"/>
+                  <path d="M14.5 2L17.5 10.5H26.5L19.5 15.5L22.5 24L14.5 19L6.5 24L9.5 15.5L2.5 10.5H11.5L14.5 2Z" fill="#FFFFFF" />
                 </svg>
               </div>
               品牌独立站 (私域阵地)
