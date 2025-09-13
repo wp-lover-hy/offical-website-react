@@ -13,8 +13,7 @@
 
 .container {
   background: linear-gradient(-5deg, rgba(241, 237, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-  border: 2px solid;
-  border-image: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 29%, rgba(255, 255, 255, 0.3) 74%, rgba(255, 255, 255, 1) 100%) 1;
+  border: 2px solid #ffffff;
   border-radius: 20px;
   backdrop-filter: blur(10px);
   padding: 32px 40px;
@@ -28,8 +27,6 @@
 
 .featureCard {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 16px;
   flex: 1;
@@ -45,24 +42,21 @@
 .iconBackground {
   width: 72px;
   height: 72px;
-  background: linear-gradient(180deg, rgba(108, 99, 255, 1) 0%, rgba(14, 0, 255, 1) 100%);
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
+  width: 72px;
+  height: 72px;
 }
 
 .featureContent {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  text-align: left;
 }
 
 .featureTitle {
@@ -72,8 +66,6 @@
   line-height: 1.56;
   color: #1E0F2A;
   margin: 0;
-  width: 240px;
-  height: 28px;
 }
 
 .featureDescription {
@@ -83,8 +75,6 @@
   line-height: 1.21;
   color: #4F4769;
   margin: 0;
-  width: 200px;
-  height: 40px;
 }
 
 // 响应式设计
@@ -93,16 +83,31 @@
     flex-direction: column;
     gap: 40px;
     padding: 24px 32px;
+    background: none;
+    border: none;
   }
 
   .featureCard {
-    width: 100%;
-    max-width: 300px;
+    width: 70%;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.30);
+    background: linear-gradient(277deg, rgba(241, 237, 255, 0.80) 25.1%, rgba(255, 255, 255, 0.80) 51.7%);
+    padding: 20px;
+  }
+  .featureContent {
+    text-align: center;
   }
 
   .featureTitle,
   .featureDescription {
     width: 100%;
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -117,11 +122,11 @@
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    max-width: 343px;
   }
 
   .featureCard {
-    max-width: 280px;
+    
+
   }
 
   .iconBackground {
@@ -129,20 +134,13 @@
     height: 48px;
   }
 
-  .icon {
-    width: 28px;
-    height: 28px;
-  }
+
 
   .featureTitle {
     font-size: 18px;
-    height: 28px;
-    width: 280px;
   }
 
   .featureDescription {
     font-size: 12px;
-    width: 280px;
-    height: 40px;
   }
 }

@@ -6,17 +6,17 @@ export const FloatingFeatures = () => {
     {
       title: "增长导向",
       description: "深度集成SEO与营销工具，让流量转化为生意。",
-      icon: "/images/icon-trending.svg"
+      icon: "/images/features/growth.png"
     },
     {
       title: "极致性能",
       description: "比肩一线互联网大厂的稳定性与响应速度。",
-      icon: "/images/icon-lamp.svg"
+      icon: "/images/features/high-performance.png"
     },
     {
       title: "美学设计",
       description: "让品牌在第一眼就赢得客户的青睐。",
-      icon: "/images/icon-marker.svg"
+      icon: "/images/features/beautiful-design.png"
     }
   ];
 
