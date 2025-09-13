@@ -19,8 +19,8 @@ export const ArticleCard = ({ article }) => {
           </div>
         </div>
         <p className={styles.excerpt}>{article.excerpt}</p>
-        <a href="/blog/any-article-slug" className={styles.readMore}>阅读全文 →</a>
       </div>
+      <a href="/blog/any-article-slug" className={styles.readMore}>阅读全文 →</a>
     </article>
   );
 };

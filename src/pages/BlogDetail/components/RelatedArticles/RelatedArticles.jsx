@@ -18,15 +18,16 @@ export const RelatedArticles = ({ articles }) => {
                 <img src={article.image} alt={article.title} />
               </div>
               <div className={styles.articleContent}>
-                <div className={styles.articleMeta}>
-                  <div className={styles.tag}>
-                    {article.category}
-                  </div>
-                </div>
+                
                 <div className={styles.articleInfo}>
                   <div className={styles.articleHeader}>
                     <h3 className={styles.articleTitle}>{article.title}</h3>
                   </div>
+                </div>
+              </div>
+              <div className={styles.articleMeta}>
+                <div className={styles.tag}>
+                  {article.category}
                 </div>
               </div>
             </Link>
