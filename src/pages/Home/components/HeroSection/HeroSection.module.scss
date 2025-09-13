@@ -1,23 +1,88 @@
 .heroSection {
-  background: url('/images/hero-bg.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
   padding: 80px 0;
 }
 
+// 渐变背景
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.backgroundGradient1 {
+  position: absolute;
+  top: 62px;
+  left: 148px;
+  z-index: 2;
+  width: 1060px;
+  height: 958.192px;
+  border-radius: 1060px;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(104, 158, 255, 0.60) 0%, rgba(225, 251, 255, 0.60) 100%);
+  filter: blur(200px);
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 800px;
+    height: 700px;
+    left: 50px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 400px;
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.backgroundGradient2 {
+  position: absolute;
+  top: 109px;
+  right: -56px;
+  z-index: 2;
+  width: 944px;
+  height: 781.017px;
+  border-radius: 944px;
+  opacity: 0.5;
+  background: linear-gradient(6deg, rgba(9, 0, 255, 0.40) 9.18%, rgba(255, 255, 255, 0.40) 117.09%);
+  filter: blur(150px);
+  overflow: hidden;
+
+  @media (max-width: 1200px) {
+    width: 700px;
+    height: 600px;
+    right: -100px;
+  }
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 300px;
+    right: -50px;
+    top: 50px;
+  }
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 124px;
+  gap: 40px;
 }
 
 .leftContent {
@@ -52,7 +117,9 @@
 }
 
 .primaryButton {
-  background: linear-gradient(-5deg, #4F46E5 0%, #4E7AFF 95%);
+
+  background: linear-gradient(357deg, #4F46E5 1.81%, #4E7AFF 92.46%);
+
   color: #FFFFFF;
   border: none;
   border-radius: 40px;
@@ -82,7 +149,7 @@
   line-height: 1.56;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 220px;
+  min-width: 140px;
 
   &:hover {
     transform: translateY(-2px);
@@ -96,68 +163,13 @@
   position: relative;
 }
 
-.imageContainer {
-  position: relative;
-  width: 680px;
-  height: 537px;
-}
-
-.mainImageWrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 643px;
-  height: 399px;
-  background: linear-gradient(180deg, rgba(241, 237, 255, 0) 0%, rgba(160, 93, 255, 0.3) 100%);
-  border: 2px solid;
-  border-image: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 29%, rgba(255, 255, 255, 0.3) 74%, rgba(255, 255, 255, 1) 100%) 1;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
 .mainImage {
-  position: absolute;
-  top: 14px;
-  left: 12px;
-  width: 619px;
-  height: 371px;
+  width: 100%;
   border-radius: 20px;
   object-fit: cover;
 }
 
-.gradientCircle {
-  position: absolute;
-  top: 120px;
-  left: 34px;
-  width: 415px;
-  height: 415px;
-  z-index: 2;
-}
 
-.gradientCircleImage {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.smallImage {
-  position: absolute;
-  top: 272px;
-  right: 0;
-  width: 173px;
-  height: 182px;
-  border: 2px solid;
-  border-image: linear-gradient(180deg, rgba(224, 157, 228, 1) 0%, rgba(108, 99, 255, 1) 100%) 1;
-  border-radius: 10px;
-  overflow: hidden;
-  z-index: 3;
-}
-
-.smallImageImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 // 响应式设计
 @media (max-width: 1024px) {
@@ -165,6 +177,9 @@
     flex-direction: column;
     gap: 60px;
     text-align: center;
+  }
+  .rightContent {
+    width: 100%;
   }
 
   .title {
@@ -185,19 +200,14 @@
 
   .imageContainer {
     width: 100%;
-    max-width: 500px;
-    height: 400px;
+    height: auto;
     margin: 0 auto;
   }
 
-  .mainImageWrapper {
-    width: 80%;
-    height: 60%;
-  }
-
   .mainImage {
-    width: calc(100% - 24px);
-    height: calc(100% - 28px);
+    width: 100%;
+    position: relative;
+
   }
 
   .gradientCircle {
@@ -218,7 +228,7 @@
 @media (max-width: 768px) {
   .heroSection {
     min-height: auto;
-    padding: 60px 0;
+    padding: 60px 0 30px 0;
   }
 
   .container {
@@ -236,21 +246,15 @@
   }
 
   .buttons {
-    flex-direction: column;
     gap: 16px;
     width: 100%;
   }
 
   .primaryButton,
   .secondaryButton {
-    width: 100%;
     max-width: 280px;
     font-size: 12px;
     padding: 12px 10px;
   }
 
-  .imageContainer {
-    height: 268px;
-    max-width: 343px;
-  }
 }
