@@ -3,7 +3,7 @@
 .faqSection {
   padding: 80px 0;
   background-color: #F9F8FC;
-  
+
   @media (max-width: 768px) {
     padding: 40px 16px;
   }
@@ -13,7 +13,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 16px;
-  
+
   @media (max-width: 768px) {
     max-width: 343px;
     padding: 0;
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
+
   @media (max-width: 768px) {
     gap: 20px;
   }
@@ -40,7 +40,7 @@
   text-align: center;
   width: 100%;
   height: 95px;
-  
+
   @media (max-width: 768px) {
     gap: 12px;
     height: 56px;
@@ -54,7 +54,7 @@
   line-height: 1.21;
   color: #0F172A;
   margin: 0;
-  
+
   @media (max-width: 768px) {
     font-size: 24px;
     line-height: 1.21;
@@ -68,7 +68,7 @@
   line-height: 1.21;
   color: #4F4769;
   margin: 0;
-  
+
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 1.21;
@@ -82,7 +82,8 @@
   gap: 20px;
   width: 100%;
   max-width: 1200px;
-  
+  margin-top: 80px;
+
   @media (max-width: 768px) {
     gap: 20px;
   }
@@ -93,7 +94,7 @@
   flex-direction: column;
   width: 100%;
   border-bottom: 1px solid #4E6AF7;
-  
+
   @media (max-width: 768px) {
     border-bottom: 1px solid #4E6AF7;
   }
@@ -103,16 +104,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 732px;
+  // gap: 732px;
   padding: 0 20px 20px;
   cursor: pointer;
   transition: all 0.3s ease;
-  
+
   @media (max-width: 768px) {
     gap: 0;
     padding: 0 20px 12px;
   }
-  
+
   &:hover {
     opacity: 0.8;
   }
@@ -127,7 +128,8 @@
   margin: 0;
   text-align: left;
   flex: 1;
-  
+  text-wrap: nowrap;
+
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 2.33;
@@ -146,13 +148,13 @@
   align-items: center;
   justify-content: center;
   transition: transform 0.3s ease;
-  
+
   @media (max-width: 768px) {
     font-size: 24px;
     width: 24px;
     height: 24px;
   }
-  
+
   &.open {
     transform: rotate(180deg);
   }
@@ -161,7 +163,7 @@
 .faqAnswer {
   padding: 0 20px 20px;
   animation: slideDown 0.3s ease-out;
-  
+
   @media (max-width: 768px) {
     padding: 0 20px 12px;
   }
@@ -174,7 +176,7 @@
   line-height: 1.5;
   color: #4F4769;
   margin: 0;
-  
+
   @media (max-width: 768px) {
     font-size: 12px;
     line-height: 1.5;
@@ -186,6 +188,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

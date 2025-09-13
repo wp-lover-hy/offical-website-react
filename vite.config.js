@@ -2,16 +2,19 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { codeInspectorPlugin } from 'code-inspector-plugin';
+import imagemin from 'unplugin-imagemin/vite';
 
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
   const plugins = isDev ? [
     codeInspectorPlugin({
       bundler: 'vite'
-    })
+    }),
+    imagemin(),
+    react()
   ]
     :
-    [react()];
+    [react(), imagemin()];
 
   return {
     plugins,
