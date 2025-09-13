@@ -17,6 +17,8 @@
         "sharp": "^0.34.3"
     },
     "devDependencies": {
+        "@types/react": "^19.1.12",
+        "@types/react-dom": "^19.1.9",
         "@vitejs/plugin-react": "^4.3.1",
         "@wordpress/components": "^27.3.0",
         "eslint": "^8.57.0",
