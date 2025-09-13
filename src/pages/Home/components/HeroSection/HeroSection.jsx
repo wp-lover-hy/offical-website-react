@@ -4,6 +4,10 @@ import styles from './HeroSection.module.scss';
 export const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
+      <div className={styles.background}>
+        <div className={styles.backgroundGradient1}></div>
+        <div className={styles.backgroundGradient2}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.leftContent}>
@@ -25,27 +29,11 @@ export const HeroSection = () => {
           </div>
           <div className={styles.rightContent}>
             <div className={styles.imageContainer}>
-              <div className={styles.mainImageWrapper}>
-                <img 
-                  src="/images/hero-banner-image-74dd10.png" 
-                  alt="Hero Banner" 
-                  className={styles.mainImage}
-                />
-              </div>
-              <div className={styles.gradientCircle}>
-                <img 
-                  src="/images/hero-gradient-circle.svg" 
-                  alt="Gradient Circle" 
-                  className={styles.gradientCircleImage}
-                />
-              </div>
-              <div className={styles.smallImage}>
-                <img 
-                  src="/images/hero-small-image-2b0f5e.png" 
-                  alt="Small Image" 
-                  className={styles.smallImageImg}
-                />
-              </div>
+              <img 
+                src="http://t2cudrsvf.hn-bkt.clouddn.com/banner-main.png" 
+                alt="Hero Banner" 
+                className={styles.mainImage}
+              />
             </div>
           </div>
         </div>
