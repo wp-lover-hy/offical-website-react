@@ -4,6 +4,10 @@ import styles from './CoreServices.module.scss';
 export const CoreServices = () => {
   return (
     <section className={styles.coreServices}>
+      <div className={styles.background}>
+        <div className={styles.backgroundGradient1}></div>
+        <div className={styles.backgroundGradient2}></div>
+      </div>
       <div className={styles.container}>
         <h2 className={styles.title}>两大核心服务</h2>
         <div className={styles.servicesGrid}>

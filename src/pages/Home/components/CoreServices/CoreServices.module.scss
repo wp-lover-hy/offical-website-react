@@ -1,6 +1,74 @@
 .coreServices {
-  background: url('/images/services-bg.jpg') center/cover no-repeat;
   padding: 80px 0;
+  position: relative;
+
+}
+
+// 渐变背景
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.backgroundGradient1 {
+  position: absolute;
+  top: 62px;
+  left: 148px;
+  z-index: 2;
+  width: 1060px;
+  height: 958.192px;
+  border-radius: 1060px;
+  border: 1px solid #000;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(104, 158, 255, 0.20) 0%, rgba(225, 251, 255, 0.20) 100%);
+  filter: blur(200px);
+
+  @media (max-width: 1200px) {
+    width: 800px;
+    height: 700px;
+    left: 50px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 400px;
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.backgroundGradient2 {
+  position: absolute;
+  top: 109px;
+  right: -56px;
+  z-index: 2;
+  width: 944px;
+  height: 781.017px;
+  border-radius: 944px;
+  border: 1px solid #000;
+  
+  opacity: 0.5;
+  background: linear-gradient(6deg, rgba(9, 0, 255, 0.20) 9.18%, rgba(255, 255, 255, 0.20) 117.09%);
+  
+  filter: blur(150px);
+
+  @media (max-width: 1200px) {
+    width: 700px;
+    height: 600px;
+    right: -100px;
+  }
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 300px;
+    right: -50px;
+    top: 50px;
+  }
 }
 
 .container {
@@ -49,7 +117,6 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 144px;
 }
 
 .serviceName {
@@ -96,11 +163,10 @@
 
 .serviceIcon {
   position: absolute;
-  top: 98px;
-  right: 40px;
+  bottom: 0;
+  right: 0;
   width: 240px;
   height: 240px;
-  opacity: 0.4;
   
   img {
     width: 100%;

@@ -1,5 +1,4 @@
 .casesSection {
-  background: url('/images/cases-bg.jpg') center/cover no-repeat;
   padding: 80px 0;
   display: flex;
   flex-direction: column;
@@ -7,10 +6,12 @@
   align-items: center;
   gap: 80px;
   position: relative;
+  min-width: 1200px;
+
 }
 
 .container {
-  max-width: 1920px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -34,7 +35,7 @@
 .casesContainer {
   position: relative;
   width: 100%;
-  max-width: 2077px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +47,7 @@
   align-items: center;
   gap: 100px;
   width: 100%;
+  overflow-x: auto;
   justify-content: center;
 }
 
@@ -172,6 +174,10 @@
 
 // 响应式设计
 @media (max-width: 1024px) {
+  .casesSection {
+    min-width: 100%;
+  }
+
   .casesGrid {
     flex-direction: column;
     gap: 40px;
@@ -192,6 +198,7 @@
   .casesSection {
     padding: 40px 0;
     gap: 32px;
+    min-width: 100%;
   }
 
   .container {
