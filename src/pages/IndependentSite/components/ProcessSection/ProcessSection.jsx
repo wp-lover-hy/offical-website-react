@@ -51,11 +51,11 @@ export const ProcessSection = () => {
             流程清晰，规范透明，我们这样把"靠谱"做到极致
           </p>
         </div>
-        
+
         {/* PC端时间线布局 */}
         <div className={`${styles.processFlow} ${styles.desktopFlow}`}>
           <div className={styles.flowLine}></div>
-          
+
           {/* Step 1 - Right side */}
           <div className={`${styles.processStep} ${styles.stepRight}`}>
             <div className={styles.stepNumber}>
@@ -150,7 +150,7 @@ export const ProcessSection = () => {
         {/* 移动端垂直布局 */}
         <div className={`${styles.processFlow} ${styles.mobileFlow}`}>
           <div className={styles.flowLine}></div>
-          
+
           {processes.map((process, index) => (
             <div key={process.id} className={`${styles.processStep} ${styles.mobileStep}`}>
               <div className={styles.stepNumber}>

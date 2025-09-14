@@ -95,6 +95,8 @@
     gap: 12px;
     margin-right: 0px;
     margin-bottom: 20px;
+    text-align: center;
+    align-items: center;
 
     &:last-child {
       margin-bottom: 0px;
@@ -114,6 +116,7 @@
   @media (max-width: 768px) {
     width: 48px;
     height: 48px;
+    text-align: center;
 
     svg {
       width: 28px;
@@ -128,6 +131,11 @@
   align-items: flex-start;
   text-align: left;
   gap: 8px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
 }
 
 .cardTitle {
@@ -169,5 +177,6 @@
   @media (max-width: 768px) {
     font-size: 12px;
     max-width: 300px;
+    // text-align: center;
   }
 }
