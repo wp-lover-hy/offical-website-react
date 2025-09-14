@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: Chen
+ * @Date: 2025-09-13 09:01:43
+ * @LastEditors: Chen
+ * @LastEditTime: 2025-09-14 13:11:09
+ */
 import React, { useState } from 'react';
 import styles from './FAQSection.module.scss';
 
@@ -40,11 +48,11 @@ export const FAQSection = () => {
             我们整理了客户最关心的几个问题，希望能帮您解惑
           </p>
         </div>
-        
+
         <div className={styles.faqList}>
           {faqs.map((faq, index) => (
             <div key={index} className={styles.faqItem}>
-              <button 
+              <button
                 className={styles.faqQuestion}
                 onClick={() => toggleFAQ(index)}
               >
@@ -53,7 +61,7 @@ export const FAQSection = () => {
                   arrow_drop_up
                 </span>
               </button>
-              
+
               {openIndex === index && (
                 <div className={styles.faqAnswer}>
                   <p>{faq.answer}</p>
