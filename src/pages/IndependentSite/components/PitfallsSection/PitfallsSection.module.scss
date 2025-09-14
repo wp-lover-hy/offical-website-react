@@ -1,7 +1,7 @@
 .pitfallsSection {
   padding: 80px 0;
   background: #F9F8FC;
-  
+
   @media (max-width: 768px) {
     padding: 40px 0;
   }
@@ -11,7 +11,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  
+
   @media (max-width: 768px) {
     padding: 0 16px;
   }
@@ -20,7 +20,7 @@
 .header {
   text-align: center;
   margin-bottom: 80px;
-  
+
   @media (max-width: 768px) {
     margin-bottom: 24px;
   }
@@ -33,7 +33,7 @@
   line-height: 1.11;
   color: #1E0F2A;
   margin: 0 0 32px 0;
-  
+
   @media (max-width: 768px) {
     font-size: 24px;
     margin: 0 0 12px 0;
@@ -48,7 +48,7 @@
   color: #4F4769;
   margin: 0;
   max-width: 1200px;
-  
+
   @media (max-width: 768px) {
     font-size: 12px;
   }
@@ -58,7 +58,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 27px;
-  
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -67,9 +67,9 @@
 
 .pitfallCard {
   background: linear-gradient(180deg, #FFFFFF 0%, #FF8F91 100%);
-  border: 4px solid;
-  border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%) 1;
-  border-radius: 20px;
+  border: 5px solid;
+  // border-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%) 1;
+  border-radius: 30px;
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -77,24 +77,29 @@
   gap: 16px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   }
-  
+
   &:nth-child(1) {
-    background: linear-gradient(180deg, #FFFFFF 0%, #FF8F91 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #ff8f9121 100%);
+    border-color: #ff8f9130;
   }
-  
+
   &:nth-child(2) {
-    background: linear-gradient(180deg, #FFFFFF 0%, #FFF28F 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #fff28f54 100%);
+    border-color: #fff28f54;
+
   }
-  
+
   &:nth-child(3) {
-    background: linear-gradient(180deg, #FFFFFF 0%, #FFCC6D 100%);
+    background: linear-gradient(180deg, #FFFFFF 0%, #ffcc6d42 100%);
+    border-color: #ffcc6d24;
+
   }
-  
+
   @media (max-width: 768px) {
     padding: 32px;
   }
@@ -107,11 +112,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   @media (max-width: 768px) {
     width: 48px;
     height: 48px;
-    
+
     svg {
       width: 28px;
       height: 28px;
@@ -124,7 +129,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  
+
   @media (max-width: 768px) {
     gap: 12px;
   }
@@ -149,7 +154,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   @media (max-width: 768px) {
     font-size: 18px;
     width: 273px;
@@ -165,7 +170,7 @@
   color: #475569;
   margin: 0;
   width: 320px;
-  
+
   @media (max-width: 768px) {
     font-size: 12px;
     width: 273px;
@@ -180,7 +185,7 @@
   color: #475569;
   margin: 0;
   width: 320px;
-  
+
   @media (max-width: 768px) {
     font-size: 12px;
     width: 273px;
@@ -194,11 +199,11 @@
   line-height: 1.21;
   text-decoration: none;
   transition: opacity 0.3s ease;
-  
+
   &:hover {
     opacity: 0.8;
   }
-  
+
   @media (max-width: 768px) {
     font-size: 14px;
   }
