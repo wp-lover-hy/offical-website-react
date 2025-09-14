@@ -1,12 +1,16 @@
 @import '../../../../styles/variables.scss';
 
+.heroSectionWrapper {
+  position: relative;
+  
+}
 .heroSection {
-  background: url('../../../../assets/images/hero-bg.jpg') center/cover no-repeat;
+  background: url('/images/about-us/about-us-bg.png') center/cover no-repeat;
   padding: 40px 0 527px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  // max-width: 1920px;
   @media (max-width: 768px) {
     padding: 20px 0 200px;
   }

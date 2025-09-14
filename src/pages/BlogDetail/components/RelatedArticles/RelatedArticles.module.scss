@@ -67,6 +67,7 @@
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow: hidden;
+  position: relative;
 
   @media (max-width: 768px) {
     max-width: none;
@@ -111,6 +112,9 @@
   display: flex;
   justify-content: center;
   gap: 8px;
+  position: absolute;
+  top: 12px;
+  left: 16px;
 }
 
 .tag {

@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+
+# 构建输出
+build/
+dist/
+
+# 配置文件
+*.config.js
+*.config.ts
+vite.config.js
+
+# 其他
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 图片和字体
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot

@@ -44,17 +44,20 @@ export const FAQSection = () => {
             <h2 className={styles.title}>还有疑问？</h2>
             <p className={styles.description}>我们整理了客户最关心的几个问题，希望能帮您解惑</p>
           </div>
-          
+
           <div className={styles.faqList}>
             {faqs.map((faq) => (
               <div key={faq.id} className={styles.faqItem}>
-                <div 
+                <div
                   className={styles.faqQuestion}
                   onClick={() => toggleFAQ(faq.id)}
                 >
                   <h3 className={styles.questionText}>{faq.question}</h3>
                   <span className={`${styles.arrow} ${openFAQ === faq.id ? styles.open : ''}`}>
-                    arrow_drop_up
+                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.8438 0.984375L5.82812 6L0.8125 0.984375H10.8438Z" fill="#4E6AF7" />
+                    </svg>
+
                   </span>
                 </div>
                 {openFAQ === faq.id && (

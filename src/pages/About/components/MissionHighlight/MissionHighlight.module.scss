@@ -1,14 +1,9 @@
-@import '../../../../styles/variables.scss';
-
 .missionHighlight {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 767px; // PC端位置
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
+  transform: translateY(-45px);
   
   @media (max-width: 768px) {
     position: static;
@@ -34,10 +29,9 @@
   padding: 20px 40px;
   width: 947px;
   max-width: 100%;
-  background: linear-gradient(-5deg, rgba(241, 237, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-  border: 2px solid;
-  border-image: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 29%, rgba(255, 255, 255, 0.3) 74%, rgba(255, 255, 255, 1) 100%) 1;
   border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.30);
+  background: linear-gradient(277deg, rgba(241, 237, 255, 0.80) 25.1%, rgba(255, 255, 255, 0.80) 51.7%);
   
   @media (max-width: 768px) {
     width: 343px;
@@ -49,7 +43,6 @@
 .iconContainer {
   width: 44px;
   height: 44px;
-  background: linear-gradient(180deg, rgba(108, 99, 255, 1) 0%, rgba(14, 0, 255, 1) 100%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -63,9 +56,8 @@
 }
 
 .icon {
-  width: 22.67px;
-  height: 21px;
-  filter: brightness(0) invert(1); // 使图标变白色
+  width: 100%;
+  height: 100%;
   
   @media (max-width: 768px) {
     width: 14.43px;

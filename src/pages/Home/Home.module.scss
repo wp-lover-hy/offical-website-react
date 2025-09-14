@@ -10,8 +10,14 @@
 }
 
 // 响应式设计
+@media (max-width: 1024px) {
+  .heroContainer {
+    padding-bottom: 815px;
+  }
+}
+
 @media (max-width: 768px) {
   .heroContainer {
-    padding-bottom: 60px;
+    padding-bottom: 0;
   }
 }
