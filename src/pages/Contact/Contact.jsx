@@ -79,6 +79,10 @@ export const Contact = () => {
 
   return (
     <div className={styles.contact}>
+      <div className={styles.background}>
+        <div className={styles.backgroundGradient1}></div>
+        <div className={styles.backgroundGradient2}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           {/* 左侧内容区 */}
@@ -135,83 +139,89 @@ export const Contact = () => {
 
           {/* 右侧表单 */}
           <div className={styles.rightSection}>
+            <div className={styles.textContent}>
+              <h1 className={styles.title}>让我们开始一次有价值的对话</h1>
+              <p className={styles.subtitle}>
+                每一次沟通，都是一次深入的战略探讨，而非简单的产品推销。我们期待倾听您的故事和挑战。
+              </p>
+            </div>
             <form className={styles.form} onSubmit={handleSubmit}>
-            <div className={styles.inputGroup}>
+              <div className={styles.inputGroup}>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="您的姓名"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className={errors.name ? styles.error : ''}
+                    />
+                    {errors.name && <span className={styles.errorText}>{errors.name}</span>}
+                  </div>
+                <div>
+                <div className={styles.inputGroup}>
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="公司名称"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.inputGroup}>
                   <input
-                    type="text"
-                    name="name"
-                    placeholder="您的姓名"
-                    value={formData.name}
+                    type="email"
+                    name="email"
+                    placeholder="您的邮箱"
+                    value={formData.email}
                     onChange={handleInputChange}
-                    className={errors.name ? styles.error : ''}
+                    className={errors.email ? styles.error : ''}
                   />
-                  {errors.name && <span className={styles.errorText}>{errors.name}</span>}
+                  {errors.email && <span className={styles.errorText}>{errors.email}</span>}
                 </div>
-              <div>
-              <div className={styles.inputGroup}>
+
+                <div className={styles.inputGroup}>
                   <input
-                    type="text"
-                    name="company"
-                    placeholder="公司名称"
-                    value={formData.company}
+                    type="tel"
+                    name="phone"
+                    placeholder="联系电话"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className={errors.phone ? styles.error : ''}
+                  />
+                  {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
+                </div>
+
+                <div className={styles.servicesGroup}>
+                  <label className={styles.servicesLabel}>感兴趣的服务</label>
+                  <div className={styles.checkboxGroup}>
+                    {['独立站定制', '系统定制', '其他'].map(service => (
+                      <label key={service} className={styles.checkboxLabel}>
+                        <input
+                          type="checkbox"
+                          checked={formData.services.includes(service)}
+                          onChange={() => handleServiceChange(service)}
+                        />
+                        <span className={styles.checkboxText}>{service}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+
+                <div className={styles.inputGroup}>
+                  <textarea
+                    name="message"
+                    placeholder="您的需求简述"
+                    rows="4"
+                    value={formData.message}
                     onChange={handleInputChange}
                   />
                 </div>
-              </div>
 
-              <div className={styles.inputGroup}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="您的邮箱"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  className={errors.email ? styles.error : ''}
-                />
-                {errors.email && <span className={styles.errorText}>{errors.email}</span>}
-              </div>
-
-              <div className={styles.inputGroup}>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="联系电话"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className={errors.phone ? styles.error : ''}
-                />
-                {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
-              </div>
-
-              <div className={styles.servicesGroup}>
-                <label className={styles.servicesLabel}>感兴趣的服务</label>
-                <div className={styles.checkboxGroup}>
-                  {['独立站定制', '系统定制', '其他'].map(service => (
-                    <label key={service} className={styles.checkboxLabel}>
-                      <input
-                        type="checkbox"
-                        checked={formData.services.includes(service)}
-                        onChange={() => handleServiceChange(service)}
-                      />
-                      <span className={styles.checkboxText}>{service}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.inputGroup}>
-                <textarea
-                  name="message"
-                  placeholder="您的需求简述"
-                  rows="4"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                />
-              </div>
-
-              <button type="submit" className={styles.submitBtn}>
-                发送您的需求
-              </button>
+                <button type="submit" className={styles.submitBtn}>
+                  发送您的需求
+                </button>
             </form>
           </div>
         </div>
