@@ -5,6 +5,10 @@ import founderAvatar from '../../../../assets/images/founder-avatar.png';
 export const FounderSection = () => {
   return (
     <section className={styles.founderSection}>
+      <div className={styles.background}>
+        <div className={styles.backgroundGradient1}></div>
+        <div className={styles.backgroundGradient2}></div>
+      </div>
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.mainContent}>

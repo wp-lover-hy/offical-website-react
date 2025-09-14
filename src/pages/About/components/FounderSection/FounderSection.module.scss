@@ -1,13 +1,77 @@
 
 .founderSection {
-  background: url('../../../../assets/images/founder-bg.jpg') center/cover no-repeat;
   padding: 80px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   
   @media (max-width: 768px) {
     padding: 0 16px;
+  }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.backgroundGradient1 {
+  position: absolute;
+  top: -400px;
+  left: -400px;
+  z-index: 2;
+  width: 1060px;
+  height: 958.192px;
+  border-radius: 1061px;
+  border: 1px solid #000;
+  opacity: 0.8;
+  background: linear-gradient(180deg, rgba(104, 158, 255, 0.20) 0%, rgba(225, 251, 255, 0.20) 100%);
+  filter: blur(200px);
+
+  @media (max-width: 1200px) {
+    width: 800px;
+    height: 700px;
+    left: 50px;
+  }
+
+  @media (max-width: 768px) {
+    width: 400px;
+    height: 400px;
+    left: 10px;
+    top: 20px;
+  }
+}
+
+.backgroundGradient2 {
+  position: absolute;
+  bottom: -400px;
+  right: -56px;
+  z-index: 2;
+  width: 944px;
+  height: 781.017px;
+  border-radius: 944px;
+  border: 1px solid #000;
+  opacity: 0.5;
+  background: linear-gradient(6deg, rgba(9, 0, 255, 0.20) 9.18%, rgba(255, 255, 255, 0.20) 117.09%);
+  filter: blur(150px);
+
+  @media (max-width: 1200px) {
+    width: 700px;
+    height: 600px;
+    right: -100px;
+  }
+
+  @media (max-width: 768px) {
+    width: 350px;
+    height: 300px;
+    right: -50px;
+    top: 50px;
   }
 }
 
@@ -15,6 +79,8 @@
   max-width: 1200px;
   width: 100%;
   padding: 0 20px;
+  position: relative;
+  z-index: 2;
   
   @media (max-width: 768px) {
     padding: 0;
@@ -213,10 +279,9 @@
   padding: 20px 40px;
   width: 953px;
   max-width: 100%;
-  background: linear-gradient(-5deg, rgba(241, 237, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
-  border: 2px solid;
-  border-image: linear-gradient(144deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 1) 29%, rgba(255, 255, 255, 0.3) 74%, rgba(255, 255, 255, 1) 100%) 1;
   border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.30);
+  background: linear-gradient(277deg, rgba(241, 237, 255, 0.80) 25.1%, rgba(255, 255, 255, 0.80) 51.7%);
   
   @media (max-width: 768px) {
     width: 343px;
