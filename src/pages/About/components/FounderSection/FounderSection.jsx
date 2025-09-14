@@ -15,8 +15,9 @@ export const FounderSection = () => {
             <div className={styles.founderInfo}>
               <div className={styles.avatarSection}>
                 <div className={styles.avatarContainer}>
-                  <div className={styles.avatarBg}></div>
-                  <img src={founderAvatar} alt="鹤笙" className={styles.avatar} />
+                  <div className={styles.avatarBg}>
+                    <img src={founderAvatar} alt="鹤笙" className={styles.avatar} />
+                  </div>
                 </div>
                 <div className={styles.nameSection}>
                   <h3 className={styles.name}>鹤笙</h3>

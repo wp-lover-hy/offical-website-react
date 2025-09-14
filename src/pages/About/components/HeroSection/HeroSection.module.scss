@@ -1,31 +1,47 @@
-@import '../../../../styles/variables.scss';
-
 .heroSectionWrapper {
   position: relative;
   
 }
 .heroSection {
-  background: url('/images/about-us/about-us-bg.png') center/cover no-repeat;
-  padding: 40px 0 527px;
+  // background: url('/images/about-us/about-us-bg.png') center/cover no-repeat;
+  // padding: 40px 0 0px;
   display: flex;
   align-items: center;
   justify-content: center;
-  // max-width: 1920px;
+
+  position: relative;
+}
+.heroBgImage {
+  width: 100%;
+  display: block;
   @media (max-width: 768px) {
-    padding: 20px 0 200px;
-    background: url('/images/about-us/about-us-bg-mobile.jpg') center/cover no-repeat;
+    display: none;
+  }
+}
+
+.heroBgImageMobile {
+  width: 100%;
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
   }
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
-  padding: 0 20px;
+  padding: 40px 20px 0 20px;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   
   @media (max-width: 768px) {
-    padding: 0 16px;
+    padding: 20px 16px 0 16px;
+    
   }
 }
 
@@ -62,6 +78,7 @@
   color: #4F4769;
   margin: 0;
   max-width: 1200px;
+  padding: 0 20px;
   
   @media (max-width: 768px) {
     font-size: 12px;
