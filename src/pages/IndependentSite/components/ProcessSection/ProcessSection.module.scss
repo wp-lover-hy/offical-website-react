@@ -1,4 +1,4 @@
-// ProcessSection styles - 严格按照Figma设计稿实现
+// ProcessSection styles - PC端和移动端响应式设计
 .processSection {
   display: flex;
   flex-direction: column;
@@ -7,6 +7,12 @@
   gap: 80px;
   padding: 80px 0;
   background: #F9F8FC;
+
+  // 移动端样式
+  @media (max-width: 768px) {
+    gap: 20px;
+    padding: 40px 0;
+  }
 }
 
 .container {
@@ -17,6 +23,14 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+
+  // 移动端样式
+  @media (max-width: 768px) {
+    width: 343px;
+    max-width: 343px;
+    gap: 20px;
+    padding: 0 16px;
+  }
 }
 
 .header {
@@ -24,6 +38,11 @@
   flex-direction: column;
   gap: 32px;
   width: 100%;
+
+  // 移动端样式
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 }
 
 .title {
@@ -34,6 +53,12 @@
   text-align: center;
   color: #0F172A;
   margin: 0;
+
+  // 移动端样式
+  @media (max-width: 768px) {
+    font-size: 24px;
+    line-height: 1.2102272510528564;
+  }
 }
 
 .subtitle {
@@ -44,25 +69,63 @@
   text-align: center;
   color: #4F4769;
   margin: 0;
+
+  // 移动端样式
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
-.processFlow {
+// PC端和移动端流程布局样式分离
+.desktopFlow {
   position: relative;
   width: 1200px;
   height: 724px;
+
+  // 在移动端隐藏PC端布局
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mobileFlow {
+  display: none; // 在PC端隐藏移动端布局
+  
+  // 移动端样式
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    gap: 12px;
+    position: relative;
+  }
 }
 
 .flowLine {
   position: absolute;
-  left: 597.5px;
-  top: 87px;
   width: 4px;
-  height: 563px;
   background: #4E6AF7;
   z-index: 1;
+
+  // PC端样式
+  .desktopFlow & {
+    left: 597.5px;
+    top: 87px;
+    height: 563px;
+  }
+
+  // 移动端样式
+  .mobileFlow & {
+    @media (max-width: 768px) {
+      left: 20px;
+      top: 97px;
+      height: 676px;
+    }
+  }
 }
 
-.processStep {
+// PC端步骤样式
+.desktopFlow .processStep {
   position: absolute;
   display: flex;
   align-items: center;
@@ -100,7 +163,19 @@
   }
 }
 
-.stepRight {
+// 移动端步骤样式
+.mobileStep {
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    gap: 19px;
+    position: relative;
+  }
+}
+
+// PC端右侧步骤样式
+.desktopFlow .stepRight {
   flex-direction: row;
 }
 
@@ -166,6 +241,14 @@
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: xor;
   }
+
+  // 移动端样式
+  .mobileStep & {
+    @media (max-width: 768px) {
+      width: auto;
+      max-width: none;
+    }
+  }
 }
 
 .stepHeader {
@@ -198,6 +281,15 @@
   color: #4F46E5;
   margin: 0;
   white-space: nowrap;
+
+  // 移动端样式
+  .mobileStep & {
+    @media (max-width: 768px) {
+      font-size: 18px;
+      line-height: 1.7777777777777777;
+      white-space: normal;
+    }
+  }
 }
 
 .stepDescription {
@@ -210,4 +302,13 @@
   width: 518px;
   z-index: 1;
   position: relative;
+
+  // 移动端样式
+  .mobileStep & {
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 2;
+      width: 240px;
+    }
+  }
 }

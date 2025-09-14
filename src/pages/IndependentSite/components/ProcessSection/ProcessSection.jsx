@@ -52,7 +52,8 @@ export const ProcessSection = () => {
           </p>
         </div>
         
-        <div className={styles.processFlow}>
+        {/* PC端时间线布局 */}
+        <div className={`${styles.processFlow} ${styles.desktopFlow}`}>
           <div className={styles.flowLine}></div>
           
           {/* Step 1 - Right side */}
@@ -144,6 +145,30 @@ export const ProcessSection = () => {
               <p className={styles.stepDescription}>{processes[4].description}</p>
             </div>
           </div>
+        </div>
+
+        {/* 移动端垂直布局 */}
+        <div className={`${styles.processFlow} ${styles.mobileFlow}`}>
+          <div className={styles.flowLine}></div>
+          
+          {processes.map((process, index) => (
+            <div key={process.id} className={`${styles.processStep} ${styles.mobileStep}`}>
+              <div className={styles.stepNumber}>
+                <div className={styles.numberCircle}>
+                  <span>{process.id}</span>
+                </div>
+              </div>
+              <div className={styles.stepCard}>
+                <div className={styles.stepHeader}>
+                  <div className={styles.stepIcon}>
+                    {process.icon}
+                  </div>
+                  <h3 className={styles.stepTitle}>{process.title}</h3>
+                </div>
+                <p className={styles.stepDescription}>{process.description}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

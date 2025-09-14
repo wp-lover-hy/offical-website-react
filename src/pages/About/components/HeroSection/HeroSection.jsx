@@ -4,7 +4,7 @@ import { MissionHighlight } from '../MissionHighlight/MissionHighlight';
 
 export const HeroSection = () => {
   return (
-      <section>
+      <section className={styles.heroSectionWrapper}>
         <section className={styles.heroSection}>
         <div className={styles.container}>
           <div className={styles.missionContent}>
