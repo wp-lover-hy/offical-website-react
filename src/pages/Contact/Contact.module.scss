@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@use '../../styles/variables' as *;
 
 .contact {
   background: #F9F8FC;
@@ -21,7 +21,7 @@
     left: 0px;
     z-index: 1;
     width: 1060px;
-    height: 958.192px;
+    height: 958px;
 
     border-radius: 1060px;
     opacity: 0.8;

@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'path'
+import react from '@vitejs/plugin-react';
 import { codeInspectorPlugin } from 'code-inspector-plugin';
+import path from 'path';
 import imagemin from 'unplugin-imagemin/vite';
+import { defineConfig } from 'vite';
 
 export default defineConfig(({ command }) => {
   const isDev = command === 'serve';
@@ -18,6 +18,13 @@ export default defineConfig(({ command }) => {
 
   return {
     plugins,
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler' // 使用现代编译器API
+        }
+      }
+    },
     server: {
       watch: {
         usePolling: true,

@@ -1,4 +1,4 @@
-@import '../../../../styles/variables.scss';
+@use '../../../../styles/variables' as *;
 
 .card {
   background: linear-gradient(157deg, rgba(255, 255, 255, 1) 6%, rgba(255, 255, 255, 1) 88%);
