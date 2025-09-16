@@ -75,7 +75,8 @@ export const ComparisonSection = () => {
                   <path d="M14.5 2L17.5 10.5H26.5L19.5 15.5L22.5 24L14.5 19L6.5 24L9.5 15.5L2.5 10.5H11.5L14.5 2Z" fill="#FFFFFF" />
                 </svg>
               </div>
-              品牌独立站 (私域阵地)
+              {/* 品牌独立站 (私域阵地) */}
+              独立站 (私域池)
             </div>
             {comparisonData.map((item, index) => (
               <div key={index} className={styles.independentCell}>
