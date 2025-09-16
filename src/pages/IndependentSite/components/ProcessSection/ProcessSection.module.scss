@@ -24,6 +24,11 @@
   margin: 0 auto;
   padding: 0 20px;
 
+  @media (max-width: 1024px) {
+    width: 100%;
+    max-width: 100%;
+  }
+
   // 移动端样式
   @media (max-width: 768px) {
     // width: 343px;
@@ -83,16 +88,16 @@
   height: 724px;
 
   // 在移动端隐藏PC端布局
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
 
 .mobileFlow {
   display: none; // 在PC端隐藏移动端布局
-
+  margin: auto;
   // 移动端样式
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
     flex-direction: column;
     align-self: stretch;
@@ -116,7 +121,7 @@
 
   // 移动端样式
   .mobileFlow & {
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       left: 20px;
       top: 97px;
       height: 748px;
@@ -165,7 +170,7 @@
 
 // 移动端步骤样式
 .mobileStep {
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
     align-items: center;
     align-self: stretch;
@@ -245,7 +250,7 @@
 
   // 移动端样式
   .mobileStep & {
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
       width: auto;
       max-width: none;
     }

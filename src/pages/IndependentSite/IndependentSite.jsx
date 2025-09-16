@@ -4,10 +4,10 @@ import { HeroSection } from './components/HeroSection/HeroSection';
 import { ComparisonSection } from './components/ComparisonSection/ComparisonSection';
 import { PitfallsSection } from './components/PitfallsSection/PitfallsSection';
 import { AdvantagesSection } from './components/AdvantagesSection/AdvantagesSection';
-import { TeamSection } from './components/TeamSection/TeamSection';
+import { TeamSection } from './../Home/components/TeamSection/TeamSection';
 import { ProcessSection } from './components/ProcessSection/ProcessSection';
 import { CTASection } from './components/CTASection/CTASection';
-import { FAQSection } from './components/FAQSection/FAQSection';
+import { FAQSection } from './../Services/components/FAQSection/FAQSection';
 
 export const IndependentSite = () => {
   return (
