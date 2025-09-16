@@ -4,6 +4,10 @@ import styles from './HeroSection.module.scss';
 export const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
+      <div className={styles.background}>
+        <div className={styles.backgroundGradient1}></div>
+        <div className={styles.backgroundGradient2}></div>
+      </div>
       <div className={styles.container}>
         {/* Hero内容 */}
         <div className={styles.heroContent}>
