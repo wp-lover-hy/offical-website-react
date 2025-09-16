@@ -12,7 +12,7 @@ export const HeroSection = () => {
         <div className={styles.heroContent}>
           <div className={styles.textContent}>
             <h1 className={styles.title}>
-              品牌独立站：<br />
+              品牌独立站：
               不是选择题，而是生死必答题
             </h1>
             <p className={styles.description}>
