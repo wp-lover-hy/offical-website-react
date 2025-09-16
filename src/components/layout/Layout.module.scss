@@ -6,4 +6,10 @@
 
 .main {
   flex: 1;
+  /* 为固定的Header预留空间 */
+  padding-top: 80px;
+  
+  @media (max-width: 768px) {
+    padding-top: 60px;
+  }
 }
